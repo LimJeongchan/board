@@ -8,4 +8,5 @@ import axios from 'axios'
 
 const app = createApp(App);
 app.config.globalProperties.axios = axios;
+/* app.config.globalProperties.store = store; */
 app.use(store).use(router).mount('#app');

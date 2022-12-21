@@ -1,7 +1,6 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/" v-for="메뉴 in MenuTitle" :key="메뉴">{{ 메뉴 }}</router-link>
   </nav>
   <router-view/>
 </template>
@@ -28,3 +27,13 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script>
+
+export default {
+  data() {
+    return {
+      MenuTitle : this.$store.state.MenuTitle
+    }
+  },
+}
+</script>

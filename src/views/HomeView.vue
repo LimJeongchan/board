@@ -7,9 +7,7 @@
       <button @click="modalpopup.visible = false">닫힘</button>
     </div>
   </div>
-  <div class="menu">
-    <a v-for="메뉴 in 메뉴들" :key="메뉴">{{ 메뉴 }}</a>
-  </div>
+
   <div class="home">
     <div v-for="(원룸, index) in products" :key="index">
       <img :src="원룸.image" class="room-img">
@@ -27,7 +25,7 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      메뉴들: ["Home", "Products", "About"],
+      
       modalpopup: { visible: false, title: "", content: "" },
       /* products : [ {name:"역삼동원룸", price:100, 신고수:0, 이미지:require("../assets/image/room0.jpg")},
       {name:"천호동원룸", price:80, 신고수:0, 이미지:require("../assets/image/room1.jpg")},
